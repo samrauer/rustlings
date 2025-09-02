@@ -1,7 +1,16 @@
 // TODO: Fix the compiler error in this function.
-fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let vec = vec;
+// fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
+//     // fill_vec is the sole owner of vec because it wasn't passed in as a reference
+//     // thus we can modify it to be mutable
+//     let mut vec = vec;
+//
+//     vec.push(88);
+//
+//     vec
+// }
 
+fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
+    // now it's passed in as a mutable copy
     vec.push(88);
 
     vec
