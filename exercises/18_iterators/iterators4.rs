@@ -10,10 +10,18 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+
+    // using fold
+    // (1..=num).fold(1, |acc, e| acc * e)
+
+    // using built in product
+    (1..=num).product()
 }
 
 fn main() {
     // You can optionally experiment here.
+    // let x: Vec<i32> = (1..=10).collect();
+    // dbg!(x);
 }
 
 #[cfg(test)]
